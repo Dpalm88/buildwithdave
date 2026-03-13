@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build With Dave — Affordable Websites for Portland, OR Small Businesses</title>
+
+  <!-- ── SEO META ── -->
+  <meta name="description" content="Professional websites for Portland, OR small businesses. Flat-rate pricing from $500, built with AI and handed over to you completely. 30-min chat + 10 photos is all it takes." />
+  <meta name="keywords" content="web design Portland Oregon, small business website Portland, affordable web design PDX, local business website, freelance web designer Portland OR" />
+  <meta name="author" content="Dave Palm" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://buildwithdave.netlify.app/" />
+
+  <!-- ── OPEN GRAPH (social sharing) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buildwithdave.netlify.app/" />
+  <meta property="og:title" content="Build With Dave — Websites for Portland Small Businesses" />
+  <meta property="og:description" content="Flat-rate websites from $500. A 30-min chat and 10 photos is all you need. Full ownership handed to you at launch." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ── TWITTER CARD ── -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Build With Dave — Websites for Portland Small Businesses" />
+  <meta name="twitter:description" content="Flat-rate websites from $500. A 30-min chat and 10 photos is all you need. Full ownership handed to you at launch." />
+
+  <!-- ── GEO / LOCAL SEO ── -->
+  <meta name="geo.region" content="US-OR" />
+  <meta name="geo.placename" content="Portland, Oregon" />
+  <meta name="geo.position" content="45.5051;-122.6750" />
+  <meta name="ICBM" content="45.5051, -122.6750" />
+
+  <!-- ── FAVICON (inline SVG → data URI) ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c8622a'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c8622a'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+
+  <!-- ── LOCAL BUSINESS STRUCTURED DATA ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Build With Dave",
+    "description": "Affordable, professional websites for Portland Oregon small businesses. Flat-rate pricing, full ownership handover, built with AI.",
+    "url": "https://buildwithdave.netlify.app/",
+    "telephone": "",
+    "email": "dpalm88@me.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5051,
+      "longitude": -122.6750
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Portland",
+      "sameAs": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    },
+    "priceRange": "$$",
+    "serviceType": "Web Design",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Website",
+        "price": "500",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Full Launch Package",
+        "price": "750",
+        "priceCurrency": "USD"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f0d0b;
+      --cream: #f7f3ed;
+      --warm: #e8dfd0;
+      --accent: #c8622a;
+      --accent-light: #e8845a;
+      --muted: #7a6f63;
+      --card-bg: #faf7f2;
+      --border: #ddd6c8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 3rem;
+      background: rgba(247,243,237,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2.5rem; }
+    nav ul a {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: #fff !important;
+      padding: 0.55rem 1.4rem; border-radius: 4px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; color: #fff !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding: 7rem 3rem 4rem;
+      gap: 3rem; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; right: -5%; top: 0;
+      width: 55%; height: 100%;
+      background: var(--warm);
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 0;
+    }
+    .hero-text { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.35rem 0.9rem; border-radius: 2px;
+      margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 900; line-height: 1.08;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 1.1rem; line-height: 1.7;
+      color: var(--muted); max-width: 480px;
+      margin-bottom: 2.4rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 0.85rem 2rem; border-radius: 4px;
+      text-decoration: none; font-weight: 500;
+      font-size: 0.95rem; transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid var(--ink); color: var(--ink);
+      padding: 0.85rem 2rem; border-radius: 4px;
+      text-decoration: none; font-weight: 500;
+      font-size: 0.95rem; transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: var(--ink); color: var(--cream); transform: translateY(-2px); }
+
+    .hero-right {
+      position: relative; z-index: 1;
+      display: grid; gap: 1rem;
+    }
+    .hero-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .hero-stat {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.6rem 1.4rem;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .hero-stat:hover { transform: translateY(-3px); }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem; font-weight: 900; color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+    .hero-badge {
+      background: var(--ink); color: var(--cream);
+      border-radius: 10px; padding: 1.4rem 1.6rem;
+      font-size: 0.92rem; line-height: 1.6;
+    }
+    .hero-badge strong { color: var(--accent-light); }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 6rem 3rem; }
+    .section-label {
+      font-size: 0.76rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent);
+      font-weight: 500; margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 900; line-height: 1.15;
+      max-width: 600px; margin-bottom: 1.2rem;
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--muted); line-height: 1.7;
+      max-width: 550px; margin-bottom: 3rem;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--warm); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .step {
+      background: var(--card-bg); border-radius: 12px;
+      padding: 2.2rem 1.8rem; border: 1px solid var(--border);
+      position: relative;
+    }
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem; font-weight: 900;
+      color: var(--border); line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .step h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+    .step-highlight {
+      display: inline-block; background: var(--accent);
+      color: #fff; font-size: 0.75rem; font-weight: 500;
+      padding: 0.25rem 0.7rem; border-radius: 3px; margin-top: 0.8rem;
+    }
+
+    /* ── PRICING ── */
+    .pricing-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem; max-width: 960px;
+    }
+    .price-card {
+      background: var(--card-bg); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 2.2rem 1.8rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .price-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+    .price-card.featured {
+      background: var(--ink); color: var(--cream);
+      border-color: var(--ink);
+    }
+    .price-card.featured .price-muted { color: #a89e94; }
+    .price-card.featured .price-list li::before { color: var(--accent-light); }
+    .price-tag {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 900; line-height: 1;
+      color: var(--accent);
+    }
+    .price-card.featured .price-tag { color: var(--accent-light); }
+    .price-range { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+    .price-card.featured .price-range { color: #a89e94; }
+    .price-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      margin: 1.2rem 0 0.4rem;
+    }
+    .price-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.4rem; }
+    .price-card.featured .price-desc { color: #a89e94; }
+    .price-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 1.4rem; }
+    .price-card.featured .price-divider { border-color: #333; }
+    .price-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .price-list li {
+      font-size: 0.88rem; padding-left: 1.4rem;
+      position: relative; line-height: 1.5;
+    }
+    .price-list li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--accent); font-weight: 700;
+    }
+    .price-btn {
+      display: block; text-align: center; margin-top: 2rem;
+      padding: 0.8rem; border-radius: 6px; font-weight: 500;
+      font-size: 0.9rem; text-decoration: none; transition: all 0.2s;
+    }
+    .price-card:not(.featured) .price-btn {
+      border: 1.5px solid var(--accent); color: var(--accent);
+    }
+    .price-card:not(.featured) .price-btn:hover {
+      background: var(--accent); color: #fff;
+    }
+    .price-card.featured .price-btn {
+      background: var(--accent); color: #fff;
+    }
+    .price-card.featured .price-btn:hover { background: var(--accent-light); }
+    .badge-popular {
+      display: inline-block; background: var(--accent);
+      color: #fff; font-size: 0.72rem; font-weight: 600;
+      padding: 0.2rem 0.7rem; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.8rem;
+    }
+
+    /* ── PORTFOLIO ── */
+    .portfolio { background: var(--warm); }
+    .portfolio-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem; max-width: 900px;
+    }
+    .portfolio-card {
+      background: #fff; border-radius: 12px;
+      border: 1px solid var(--border); overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .portfolio-thumb {
+      height: 200px; display: block;
+      text-decoration: none;
+      position: relative; overflow: hidden;
+      cursor: pointer;
+    }
+    .portfolio-thumb:hover .thumb-cta {
+      opacity: 1; transform: translateY(0);
+    }
+    .thumb-inner {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 1.5rem; text-align: center;
+    }
+    .thumb-icon { font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .thumb-site-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+    .thumb-url {
+      font-size: 0.72rem; opacity: 0.6;
+      font-family: 'DM Sans', monospace; letter-spacing: 0.02em;
+    }
+    .thumb-cta {
+      margin-top: 0.9rem;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: inherit; font-size: 0.78rem; font-weight: 600;
+      padding: 0.35rem 0.9rem; border-radius: 20px;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .thumb-wildlens { background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%); color: #a8e0a8; }
+    .thumb-gorge    { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #e2c96a; }
+    .thumb-spices   { background: linear-gradient(135deg, #3d1a08 0%, #6b3a18 100%); color: #f4c07a; }
+    .thumb-cascade  { background: linear-gradient(135deg, #0a1628 0%, #1a3050 100%); color: #7ac0e8; }
+    .portfolio-info {
+      padding: 1.3rem 1.4rem; flex: 1;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .portfolio-meta { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; }
+    .portfolio-info h3 { font-size: 1rem; font-weight: 600; }
+    .portfolio-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .portfolio-info p { font-size: 0.84rem; color: var(--muted); line-height: 1.6; flex: 1; }
+    .portfolio-link {
+      font-size: 0.82rem; color: var(--accent);
+      text-decoration: none; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .portfolio-link:hover { text-decoration: underline; }
+    .tag {
+      display: inline-block; font-size: 0.72rem;
+      background: var(--warm); color: var(--muted);
+      padding: 0.2rem 0.6rem; border-radius: 3px;
+    }
+
+    /* ── HANDOVER SECTION ── */
+    .handover {
+      background: var(--ink); color: var(--cream);
+      text-align: center;
+    }
+    .handover .section-label { color: var(--accent-light); }
+    .handover .section-title { color: var(--cream); margin: 0 auto 1.2rem; }
+    .handover .section-sub { color: #a89e94; margin: 0 auto 3rem; text-align: center; }
+    .handover-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; max-width: 860px; margin: 0 auto;
+    }
+    .handover-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 1.8rem 1.4rem;
+    }
+    .handover-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .handover-item h3 { font-size: 0.98rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .handover-item p { font-size: 0.85rem; color: #a89e94; line-height: 1.6; }
+
+    /* ── CTA ── */
+    .cta-band {
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 3.5rem 4rem; flex-wrap: wrap; gap: 2rem;
+    }
+    .cta-band h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 900; color: #fff;
+      max-width: 480px; line-height: 1.2;
+    }
+    .cta-band .btn-white {
+      background: #fff; color: var(--accent);
+      padding: 0.9rem 2.2rem; border-radius: 5px;
+      text-decoration: none; font-weight: 600;
+      font-size: 0.95rem; white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .cta-band .btn-white:hover { opacity: 0.9; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.5rem 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--border); flex-wrap: wrap; gap: 1rem;
+    }
+    footer p { font-size: 0.83rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 1.8rem; }
+    .footer-links a { font-size: 0.83rem; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── EMAIL OBFUSCATION ── */
+    .email-link { cursor: pointer; color: inherit; text-decoration: none; }
+    .email-link:hover { color: var(--accent-light); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-text > * { animation: fadeUp 0.7s ease both; }
+    .hero-text > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-text > *:nth-child(2) { animation-delay: 0.22s; }
+    .hero-text > *:nth-child(3) { animation-delay: 0.34s; }
+    .hero-text > *:nth-child(4) { animation-delay: 0.46s; }
+    .hero-right { animation: fadeUp 0.7s 0.3s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { gap: 1.4rem; }
+      .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+      .hero::before { display: none; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .handover-grid { grid-template-columns: 1fr; }
+      .cta-band { padding: 2.5rem 2rem; }
+      section { padding: 4rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span>Build</span>WithDave</a>
+  <ul>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#portfolio">Examples</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">AI-Powered · Local Businesses</span>
+    <h1>Your business deserves a <em>beautiful</em> web presence.</h1>
+    <p class="hero-sub">
+      Professional websites built for local small businesses — fast, affordable, and yours to keep. All you need is a 30-minute conversation and up to 10 photos.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Free Chat</a>
+      <a href="#portfolio" class="btn-outline">See Examples</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-row">
+      <div class="hero-stat">
+        <div class="stat-num">$500</div>
+        <div class="stat-label">Flat starting price<br/>includes 8 hrs of work</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">30</div>
+        <div class="stat-label">Minute kickoff<br/>conversation is all it takes</div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <strong>Fully hands-off for you.</strong> Provide photos & vision — I handle everything: design, build, domain setup, and launch. Then I hand over full control so the site is truly yours.
+    </div>
+    <div class="hero-stat-row">
+      <div class="hero-stat">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Photos max needed<br/>to get started</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Ownership<br/>transferred to you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-label">The Process</div>
+  <h2 class="section-title">From conversation to live website in days.</h2>
+  <p class="section-sub">No technical knowledge required. You focus on your business; I handle the rest.</p>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>30-Minute Discovery Chat</h3>
+      <p>We talk about your business, your customers, your goals, and the look and feel you want. That's all the direction I need.</p>
+      <span class="step-highlight">Free — no obligation</span>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Send Up to 10 Photos</h3>
+      <p>Drop your best photos in a shared folder. Product shots, team photos, location images — whatever represents your business.</p>
+      <span class="step-highlight">Includes up to 8 hrs of work</span>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Launch & Hand Over</h3>
+      <p>Your site goes live with your own domain. I walk you through your full ownership so you have complete control going forward.</p>
+      <span class="step-highlight">Domain + hosting included</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Clear, honest pricing for local businesses.</h2>
+  <p class="section-sub">No hidden fees. No long contracts. Everything you need to get found online.</p>
+  <div class="pricing-grid">
+
+    <div class="price-card">
+      <div class="price-tag">$500</div>
+      <div class="price-range">Flat rate — most small businesses</div>
+      <div class="price-name">Starter Site</div>
+      <div class="price-desc">A clean, professional 1–5 page site. Everything a local business needs to get found and look great online.</div>
+      <hr class="price-divider"/>
+      <ul class="price-list">
+        <li>Up to 8 hours of initial work</li>
+        <li>Custom design — no templates</li>
+        <li>Mobile-friendly & fast-loading</li>
+        <li>Up to 10 of your photos used</li>
+        <li>30-min kickoff conversation</li>
+        <li>Full ownership handover</li>
+      </ul>
+      <a href="#contact" class="price-btn">Get Started</a>
+    </div>
+
+    <div class="price-card featured">
+      <span class="badge-popular">Most Popular</span>
+      <div class="price-tag">$750</div>
+      <div class="price-range">Flat rate + ~$20/yr domain</div>
+      <div class="price-name">Full Launch Package</div>
+      <div class="price-desc">Everything in Starter, plus your own .com domain purchased, configured, and live — ready to share with customers day one.</div>
+      <hr class="price-divider"/>
+      <ul class="price-list">
+        <li>Everything in Starter Site</li>
+        <li>Domain purchase & registration</li>
+        <li>DNS & hosting configuration</li>
+        <li>SSL certificate (secure https)</li>
+        <li>Contact form or booking link</li>
+        <li>Google Business setup guidance</li>
+      </ul>
+      <a href="#contact" class="price-btn">Get Started</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-tag">$200/yr</div>
+      <div class="price-range">or $75/hr on-demand</div>
+      <div class="price-name">Care Plan</div>
+      <div class="price-desc">Stay fresh without the stress. Seasonal updates, edits, and peace of mind — all handled for you.</div>
+      <hr class="price-divider"/>
+      <ul class="price-list">
+        <li>Annual plan: up to 4 hours</li>
+        <li>Text, photo & menu updates</li>
+        <li>Seasonal content changes</li>
+        <li>Minor design tweaks</li>
+        <li>On-demand: $75/hr for extras</li>
+        <li>No retainer required</li>
+      </ul>
+      <a href="#contact" class="price-btn">Add to Any Plan</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="section-label">Example Work</div>
+  <h2 class="section-title">Real websites for real local businesses.</h2>
+  <p class="section-sub">Each site is built from scratch to match the unique character of the business.</p>
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card">
+      <a href="https://dpalm88.github.io/wildlens-website" target="_blank" class="portfolio-thumb thumb-wildlens">
+        <div class="thumb-inner">
+          <div class="thumb-icon">📷</div>
+          <div class="thumb-site-name">WildLens</div>
+          <div class="thumb-url">dpalm88.github.io/wildlens-website</div>
+          <div class="thumb-cta">Visit Site ↗</div>
+        </div>
+      </a>
+      <div class="portfolio-info">
+        <div class="portfolio-meta">
+          <h3>WildLens Photography</h3>
+          <div class="portfolio-tags"><span class="tag">Photography</span><span class="tag">Portfolio</span></div>
+        </div>
+        <p>Immersive wildlife & nature photography portfolio. Full-bleed imagery, gallery pages, and a contact/booking flow built for a professional photographer.</p>
+        <a class="portfolio-link" href="https://dpalm88.github.io/wildlens-website" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <a href="https://runthegorge.netlify.app/" target="_blank" class="portfolio-thumb thumb-gorge">
+        <div class="thumb-inner">
+          <div class="thumb-icon">🏃</div>
+          <div class="thumb-site-name">Run the Gorge</div>
+          <div class="thumb-url">runthegorge.netlify.app</div>
+          <div class="thumb-cta">Visit Site ↗</div>
+        </div>
+      </a>
+      <div class="portfolio-info">
+        <div class="portfolio-meta">
+          <h3>Run The Gorge</h3>
+          <div class="portfolio-tags"><span class="tag">Events</span><span class="tag">Recreation</span></div>
+        </div>
+        <p>Race event site for a Columbia River Gorge running series. Event details, registration links, course info, and a bold outdoor aesthetic.</p>
+        <a class="portfolio-link" href="https://runthegorge.netlify.app/" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <a href="https://sadies-spices.netlify.app/" target="_blank" class="portfolio-thumb thumb-spices">
+        <div class="thumb-inner">
+          <div class="thumb-icon">🌶️</div>
+          <div class="thumb-site-name">Sadie's Spices</div>
+          <div class="thumb-url">sadies-spices.netlify.app</div>
+          <div class="thumb-cta">Visit Site ↗</div>
+        </div>
+      </a>
+      <div class="portfolio-info">
+        <div class="portfolio-meta">
+          <h3>Sadie's Spices</h3>
+          <div class="portfolio-tags"><span class="tag">Food & Bev</span><span class="tag">Shop</span></div>
+        </div>
+        <p>Warm, inviting storefront for an artisan spice & seasoning brand. Product showcase, brand story, and calls-to-action for a small-batch food business.</p>
+        <a class="portfolio-link" href="https://sadies-spices.netlify.app/" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <a href="https://cascade-junk-removal.netlify.app/" target="_blank" class="portfolio-thumb thumb-cascade">
+        <div class="thumb-inner">
+          <div class="thumb-icon">🚛</div>
+          <div class="thumb-site-name">Cascade Junk Removal</div>
+          <div class="thumb-url">cascade-junk-removal.netlify.app</div>
+          <div class="thumb-cta">Visit Site ↗</div>
+        </div>
+      </a>
+      <div class="portfolio-info">
+        <div class="portfolio-meta">
+          <h3>Cascade Junk Removal</h3>
+          <div class="portfolio-tags"><span class="tag">Home Services</span><span class="tag">Local</span></div>
+        </div>
+        <p>No-nonsense lead generation site for a local hauling company. Services, service area, pricing overview, and a prominent call/quote request button.</p>
+        <a class="portfolio-link" href="https://cascade-junk-removal.netlify.app/" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HANDOVER -->
+<section class="handover">
+  <div class="section-label">Full Ownership</div>
+  <h2 class="section-title">Your site. Your way. Forever.</h2>
+  <p class="section-sub">When the build is done, I walk you through everything so you're in complete control — no lock-in, no monthly fees just to access your own site.</p>
+  <div class="handover-grid">
+    <div class="handover-item">
+      <div class="handover-icon">🔑</div>
+      <h3>Domain Ownership</h3>
+      <p>Your domain is registered in your name. You own it outright and can take it anywhere.</p>
+    </div>
+    <div class="handover-item">
+      <div class="handover-icon">🖥️</div>
+      <h3>Hosting Access</h3>
+      <p>Full access to your hosting account and codebase — no middleman between you and your site.</p>
+    </div>
+    <div class="handover-item">
+      <div class="handover-icon">📖</div>
+      <h3>Walkthrough Included</h3>
+      <p>I show you how to make basic updates yourself, so you're never helpless or dependent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" id="contact">
+  <h2>Ready to get your business online? Let's talk.</h2>
+  <a href="#" class="btn-white" id="cta-email">Book Your Free 30-Min Chat →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Build With Dave — Portland, OR</p>
+  <div class="footer-links">
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#portfolio">Examples</a>
+    <a href="#" id="footer-email">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Email obfuscation — assembled at runtime, never in plain HTML
+  (function() {
+    var u = 'dpalm88', d = 'me', t = 'com';
+    var addr = u + '\u0040' + d + '.' + t;
+    var mailto = 'mailto:' + addr;
+    document.getElementById('cta-email').href = mailto;
+    var fe = document.getElementById('footer-email');
+    if (fe) fe.href = mailto;
+  })();
+</script>
+</body>
+</html>
