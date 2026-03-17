@@ -3,7 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Local Web Presence — Built with Claude</title>
+  <title>Build With Dave — Affordable Websites for Portland, OR Small Businesses</title>
+
+  <!-- ── SEO META ── -->
+  <meta name="description" content="Professional websites for Portland, OR small businesses. Flat-rate pricing from $500, built with AI and handed over to you completely. 30-min chat + 10 photos is all it takes." />
+  <meta name="keywords" content="web design Portland Oregon, small business website Portland, affordable web design PDX, local business website, freelance web designer Portland OR" />
+  <meta name="author" content="Dave Palm" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://buildwithdave.netlify.app/" />
+
+  <!-- ── OPEN GRAPH (social sharing) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buildwithdave.netlify.app/" />
+  <meta property="og:title" content="Build With Dave — Websites for Portland Small Businesses" />
+  <meta property="og:description" content="Flat-rate websites from $500. A 30-min chat and 10 photos is all you need. Full ownership handed to you at launch." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ── TWITTER CARD ── -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Build With Dave — Websites for Portland Small Businesses" />
+  <meta name="twitter:description" content="Flat-rate websites from $500. A 30-min chat and 10 photos is all you need. Full ownership handed to you at launch." />
+
+  <!-- ── GEO / LOCAL SEO ── -->
+  <meta name="geo.region" content="US-OR" />
+  <meta name="geo.placename" content="Portland, Oregon" />
+  <meta name="geo.position" content="45.5051;-122.6750" />
+  <meta name="ICBM" content="45.5051, -122.6750" />
+
+  <!-- ── FAVICON (inline SVG → data URI) ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c8622a'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c8622a'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+
+  <!-- ── LOCAL BUSINESS STRUCTURED DATA ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Build With Dave",
+    "description": "Affordable, professional websites for Portland Oregon small businesses. Flat-rate pricing, full ownership handover, built with AI.",
+    "url": "https://buildwithdave.netlify.app/",
+    "telephone": "",
+    "email": "dpalm88@me.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5051,
+      "longitude": -122.6750
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Portland",
+      "sameAs": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    },
+    "priceRange": "$$",
+    "serviceType": "Web Design",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Website",
+        "price": "500",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Full Launch Package",
+        "price": "750",
+        "priceCurrency": "USD"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -293,7 +368,7 @@
     }
     .thumb-wildlens { background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%); color: #a8e0a8; }
     .thumb-gorge    { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #e2c96a; }
-    .thumb-strava   { background: linear-gradient(135deg, #2d0a0a 0%, #7a1a00 100%); color: #fc6c3f; }
+    .thumb-spices   { background: linear-gradient(135deg, #3d1a08 0%, #6b3a18 100%); color: #f4c07a; }
     .thumb-cascade  { background: linear-gradient(135deg, #0a1628 0%, #1a3050 100%); color: #7ac0e8; }
     .portfolio-info {
       padding: 1.3rem 1.4rem; flex: 1;
@@ -336,6 +411,71 @@
     .handover-icon { font-size: 2rem; margin-bottom: 0.8rem; }
     .handover-item h3 { font-size: 0.98rem; font-weight: 600; margin-bottom: 0.5rem; }
     .handover-item p { font-size: 0.85rem; color: #a89e94; line-height: 1.6; }
+
+    /* ── DOMAIN EXPLAINER ── */
+    .domain-explainer { background: var(--cream); }
+    .domain-steps {
+      display: flex; flex-direction: column; gap: 0;
+      max-width: 720px; margin-bottom: 3.5rem;
+    }
+    .domain-step {
+      display: grid; grid-template-columns: 56px 1fr;
+      gap: 1.4rem;
+    }
+    .domain-step-left {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .domain-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; position: relative; z-index: 1;
+    }
+    .domain-line {
+      width: 2px; flex: 1; background: var(--border);
+      margin: 4px 0;
+    }
+    .domain-step-right {
+      padding-bottom: 2.2rem;
+    }
+    .domain-tag {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+    .domain-step-right h3 {
+      font-size: 1.05rem; font-weight: 600;
+      margin-bottom: 0.5rem; line-height: 1.3;
+    }
+    .domain-step-right p {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.7;
+      margin-bottom: 0.7rem;
+    }
+    .domain-step-right em { color: var(--ink); font-style: normal; font-weight: 500; }
+    .domain-note {
+      display: inline-block;
+      background: var(--warm); border-left: 3px solid var(--accent);
+      padding: 0.5rem 0.9rem; border-radius: 0 6px 6px 0;
+      font-size: 0.82rem; color: var(--muted); line-height: 1.5;
+    }
+    .domain-faq {
+      max-width: 720px;
+      display: flex; flex-direction: column; gap: 0;
+      border: 1.5px solid var(--border); border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-item {
+      padding: 1.3rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-weight: 600; font-size: 0.95rem;
+      margin-bottom: 0.4rem; color: var(--ink);
+    }
+    .faq-a { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
 
     /* ── CTA ── */
     .cta-band {
@@ -384,7 +524,7 @@
     .hero-text > *:nth-child(4) { animation-delay: 0.46s; }
     .hero-right { animation: fadeUp 0.7s 0.3s ease both; }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE — TABLET (≤900px) ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       nav ul { gap: 1.4rem; }
@@ -394,9 +534,89 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .portfolio-grid { grid-template-columns: 1fr; }
       .handover-grid { grid-template-columns: 1fr; }
+      .domain-explainer { padding: 4rem 1.5rem; }
       .cta-band { padding: 2.5rem 2rem; }
       section { padding: 4rem 1.5rem; }
       footer { padding: 2rem 1.5rem; }
+    }
+
+    /* ── RESPONSIVE — MOBILE (≤600px) ── */
+    @media (max-width: 600px) {
+
+      /* Nav — hide links, keep logo + CTA only */
+      nav { padding: 0.9rem 1.2rem; }
+      nav ul li:not(:last-child) { display: none; }
+      nav ul { gap: 0; }
+      .nav-cta { padding: 0.5rem 1.1rem; font-size: 0.84rem; }
+
+      /* Hero */
+      .hero { padding: 5.5rem 1.2rem 2.5rem; gap: 2rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-sub { font-size: 1rem; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; padding: 1rem; }
+      .hero-stat-row { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .hero-stat { padding: 1.2rem 1rem; }
+      .stat-num { font-size: 2rem; }
+      .hero-badge { font-size: 0.88rem; padding: 1.1rem 1.2rem; }
+
+      /* Sections */
+      section { padding: 3rem 1.2rem; }
+      .section-title { font-size: 1.7rem; }
+      .section-sub { font-size: 0.92rem; margin-bottom: 2rem; }
+
+      /* How it works */
+      .steps-grid { gap: 1.2rem; }
+      .step { padding: 1.6rem 1.4rem; }
+      .step-num { font-size: 3rem; }
+
+      /* Pricing */
+      .pricing-grid { gap: 1.2rem; }
+      .price-card { padding: 1.8rem 1.4rem; }
+      .price-tag { font-size: 2.2rem; }
+      .price-card.featured { order: -1; }
+
+      /* Portfolio */
+      .portfolio-grid { gap: 1.2rem; }
+      .portfolio-thumb { height: 160px; }
+      .thumb-site-name { font-size: 1.1rem; }
+
+      /* Domain explainer */
+      .domain-explainer { padding: 3rem 1.2rem; }
+      .domain-steps { margin-bottom: 2.5rem; }
+      .domain-step { grid-template-columns: 44px 1fr; gap: 1rem; }
+      .domain-num { width: 34px; height: 34px; font-size: 0.95rem; }
+      .domain-step-right { padding-bottom: 1.8rem; }
+      .domain-step-right h3 { font-size: 0.97rem; }
+      .domain-step-right p { font-size: 0.86rem; }
+      .domain-note { font-size: 0.78rem; }
+      .domain-faq { border-radius: 8px; }
+      .faq-item { padding: 1.1rem 1.2rem; }
+      .faq-q { font-size: 0.9rem; }
+      .faq-a { font-size: 0.84rem; }
+
+      /* Handover */
+      .handover { padding: 3rem 1.2rem; }
+      .handover-grid { gap: 1rem; }
+      .handover-item { padding: 1.4rem 1.2rem; }
+
+      /* CTA band */
+      .cta-band {
+        padding: 2.5rem 1.2rem;
+        flex-direction: column;
+        text-align: center;
+      }
+      .cta-band h2 { font-size: 1.6rem; }
+      .cta-band .btn-white { width: 100%; text-align: center; padding: 1rem; }
+
+      /* Footer */
+      footer {
+        padding: 1.8rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .footer-links { flex-wrap: wrap; gap: 1rem; }
     }
   </style>
 </head>
@@ -404,10 +624,11 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#"><span>Local</span>Web</a>
+  <a class="nav-logo" href="#"><span>Build</span>WithDave</a>
   <ul>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#domain">Domain Setup</a></li>
     <li><a href="#portfolio">Examples</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
@@ -588,40 +809,40 @@
     </div>
 
     <div class="portfolio-card">
-      <a href="https://strava-dashboard-dp.pages.dev/" target="_blank" class="portfolio-thumb thumb-strava">
+      <a href="https://sadies-spices.netlify.app/" target="_blank" class="portfolio-thumb thumb-spices">
         <div class="thumb-inner">
-          <div class="thumb-icon">🚴</div>
-          <div class="thumb-site-name">Strava Dashboard</div>
-          <div class="thumb-url">strava-dashboard-dp.pages.dev</div>
+          <div class="thumb-icon">🌶️</div>
+          <div class="thumb-site-name">Sadie's Spices</div>
+          <div class="thumb-url">sadies-spices.netlify.app</div>
           <div class="thumb-cta">Visit Site ↗</div>
         </div>
       </a>
       <div class="portfolio-info">
         <div class="portfolio-meta">
-          <h3>Strava Activity Dashboard</h3>
-          <div class="portfolio-tags"><span class="tag">Data / Dashboard</span><span class="tag">Fitness & Health</span><span class="tag">Personal Project</span></div>
+          <h3>Sadie's Spices</h3>
+          <div class="portfolio-tags"><span class="tag">Food & Bev</span><span class="tag">Shop</span></div>
         </div>
-        <p>Personal React dashboard connected to the Strava API. Tracks running & cycling stats, weekly mileage charts, training load (fitness/fatigue/form), and recent GPS routes — all in a dark-themed, data-forward UI.</p>
-        <a class="portfolio-link" href="https://strava-dashboard-dp.pages.dev/" target="_blank">View Live Site →</a>
+        <p>Warm, inviting storefront for an artisan spice & seasoning brand. Product showcase, brand story, and calls-to-action for a small-batch food business.</p>
+        <a class="portfolio-link" href="https://sadies-spices.netlify.app/" target="_blank">View Live Site →</a>
       </div>
     </div>
 
     <div class="portfolio-card">
-      <a href="https://cascade-junk-removal.netlify.app/" target="_blank" class="portfolio-thumb thumb-cascade">
+      <a href="https://ridgeline-junk-removal.netlify.app/" target="_blank" class="portfolio-thumb thumb-cascade">
         <div class="thumb-inner">
           <div class="thumb-icon">🚛</div>
-          <div class="thumb-site-name">Cascade Junk Removal</div>
-          <div class="thumb-url">cascade-junk-removal.netlify.app</div>
+          <div class="thumb-site-name">Ridgeline Junk Removal</div>
+          <div class="thumb-url">ridgeline-junk-removal.netlify.app</div>
           <div class="thumb-cta">Visit Site ↗</div>
         </div>
       </a>
       <div class="portfolio-info">
         <div class="portfolio-meta">
-          <h3>Cascade Junk Removal</h3>
+          <h3>Ridgeline Junk Removal</h3>
           <div class="portfolio-tags"><span class="tag">Home Services</span><span class="tag">Local</span></div>
         </div>
         <p>No-nonsense lead generation site for a local hauling company. Services, service area, pricing overview, and a prominent call/quote request button.</p>
-        <a class="portfolio-link" href="https://cascade-junk-removal.netlify.app/" target="_blank">View Live Site →</a>
+        <a class="portfolio-link" href="https://ridgeline-junk-removal.netlify.app/" target="_blank">View Live Site →</a>
       </div>
     </div>
 
@@ -652,6 +873,109 @@
   </div>
 </section>
 
+<!-- DOMAIN SETUP EXPLAINER -->
+<section class="domain-explainer" id="domain">
+  <div class="section-label">Full Launch Package — How It Works</div>
+  <h2 class="section-title">Your .com, start to finish. Here's exactly what happens.</h2>
+  <p class="section-sub">No surprises. No technical headaches. I handle every step — and everything ends up in your name, not mine.</p>
+
+  <div class="domain-steps">
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">1</div>
+        <div class="domain-line"></div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 1</div>
+        <h3>We pick your domain name together</h3>
+        <p>During our kickoff chat we'll brainstorm options — usually something like <em>portlandplumbing.com</em> or <em>yourbizname.com</em>. I'll check availability live and we'll lock one in.</p>
+        <div class="domain-note">💡 .com domains run ~$10–15/yr. That annual renewal stays with you.</div>
+      </div>
+    </div>
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">2</div>
+        <div class="domain-line"></div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 1</div>
+        <h3>Domain is registered in your name</h3>
+        <p>I purchase the domain through Namecheap using <strong>your email address</strong> — so it belongs to you from day one. You get the login credentials immediately. No lock-in, no dependency on me.</p>
+        <div class="domain-note">🔒 Your domain, your account. I never hold it on your behalf.</div>
+      </div>
+    </div>
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">3</div>
+        <div class="domain-line"></div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 1–2</div>
+        <h3>Site is built & deployed to hosting</h3>
+        <p>While DNS propagates (the internet "learns" your new address — usually a few hours, up to 24), I finish building your site and deploy it to Netlify's free hosting tier.</p>
+        <div class="domain-note">⚡ Netlify hosting is free forever for sites like yours. No monthly fee.</div>
+      </div>
+    </div>
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">4</div>
+        <div class="domain-line"></div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 2</div>
+        <h3>Domain is pointed to your site</h3>
+        <p>I connect your .com to your hosting — updating DNS nameservers so that typing <em>yourbusiness.com</em> takes visitors to your new site. Takes about 15 minutes of work on my end.</p>
+        <div class="domain-note">🌐 Once live, your site is reachable at your real address worldwide.</div>
+      </div>
+    </div>
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">5</div>
+        <div class="domain-line"></div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 2</div>
+        <h3>SSL certificate activates automatically</h3>
+        <p>Netlify provisions a free SSL certificate the moment DNS resolves — so your site loads as <strong>https://</strong> (the padlock icon). Google ranks secure sites higher. Zero extra cost.</p>
+        <div class="domain-note">🔐 Free SSL via Let's Encrypt. Renews automatically every 90 days.</div>
+      </div>
+    </div>
+
+    <div class="domain-step">
+      <div class="domain-step-left">
+        <div class="domain-num">6</div>
+      </div>
+      <div class="domain-step-right">
+        <div class="domain-tag">Day 2–3</div>
+        <h3>15-min walkthrough & full handover</h3>
+        <p>We hop on a quick screen share. I show you your Namecheap domain dashboard and your Netlify hosting panel. You have complete, independent access to everything. We're done — it's yours.</p>
+        <div class="domain-note">✅ After this call you need zero technical knowledge to keep your site running.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="domain-faq">
+    <div class="faq-item">
+      <div class="faq-q">What if I already have a domain?</div>
+      <div class="faq-a">No problem — I can point your existing domain to the new site. The process is the same, just skipping the purchase step. No extra charge.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What does it cost me after launch?</div>
+      <div class="faq-a">Just your domain renewal — roughly $15/yr. Netlify hosting is free. That's it unless you add the optional Care Plan for updates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I move the site to a different host later?</div>
+      <div class="faq-a">Yes, completely. You own the code and the domain. You can take it to any host you like, anytime. No penalties, no friction.</div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band" id="contact">
   <h2>Ready to get your business online? Let's talk.</h2>
@@ -660,7 +984,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 LocalWeb — Built with Claude AI · Portland, OR</p>
+  <p>© 2025 Build With Dave — Portland, OR</p>
   <div class="footer-links">
     <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
