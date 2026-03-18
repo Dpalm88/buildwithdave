@@ -1,7 +1,4 @@
 # Build With Dave 🌲
-**Professional Web Design & Cloud Consulting | Portland, OR**
-
-# Build With Dave 🌲
 ### [Visit the Live Site: buildwithdave.pages.dev](https://buildwithdave.pages.dev)
 
 **Professional Web Design & Cloud Consulting | Portland, OR**
