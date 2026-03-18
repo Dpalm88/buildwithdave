@@ -1,6 +1,11 @@
 # Build With Dave 🌲
 **Professional Web Design & Cloud Consulting | Portland, OR**
 
+# Build With Dave 🌲
+### [Visit the Live Site: buildwithdave.pages.dev](https://buildwithdave.pages.dev)
+
+**Professional Web Design & Cloud Consulting | Portland, OR**
+
 ![Cloudflare Pages](https://img.shields.io/badge/Deployed%20to-Cloudflare%20Pages-f38020?style=flat&logo=cloudflare&logoColor=white)
 ![Build Status](https://img.shields.io/badge/CI/CD-GitHub--Actions-blue?logo=github-actions)
 
